@@ -5,7 +5,7 @@ This repository contains front-end projects built following the [roadmap.sh](htt
 ## Projects List
 
 [Single Page Cv](https://roadmap.sh/projects/single-page-cv),
-[Tabs](https://roadmap.sh/projects/tabs),
+[Tabs](https://roadmap.sh/projects/simple-tabs),
 
 Click any of the images below to view the readme and live demo of the project.
 
