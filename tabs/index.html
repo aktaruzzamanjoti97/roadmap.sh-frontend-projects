@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tabs Example</title>
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	</head>
+	<body class="flex items-center justify-center min-h-screen bg-gray-100">
+		<div
+			class="w-full max-w-2xl rounded-xl border border-gray-400 bg-white p-6"
+		>
+			<!-- Tab Buttons -->
+			<div class="flex space-x-6 border-b border-gray-300 mb-6">
+				<button
+					data-tab="tab1"
+					class="tab-btn relative pb-2 text-lg font-medium text-black after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-black active"
+				>
+					First Tab
+				</button>
+				<button
+					data-tab="tab2"
+					class="tab-btn relative pb-2 text-lg font-medium text-gray-400 hover:text-black"
+				>
+					Second Tab
+				</button>
+				<button
+					data-tab="tab3"
+					class="tab-btn relative pb-2 text-lg font-medium text-gray-400 hover:text-black"
+				>
+					Third Tab
+				</button>
+				<button
+					data-tab="tab4"
+					class="tab-btn relative pb-2 text-lg font-medium text-gray-400 hover:text-black"
+				>
+					Fourth Tab
+				</button>
+			</div>
+
+			<!-- Instruction Text -->
+			<p class="mb-6 text-lg">
+				Clicking each tab should hide the content of the other tab and show
+				the content of clicked tab. By default, enable the first tab.
+			</p>
+
+			<!-- Tab Contents -->
+			<div id="tab1" class="tab-content block">
+				<div
+					class="rounded-2xl bg-black p-6 text-center text-white text-lg"
+				>
+					First Tab content to be displayed here.
+				</div>
+			</div>
+			<div id="tab2" class="tab-content hidden">
+				<div
+					class="rounded-2xl bg-black p-6 text-center text-white text-lg"
+				>
+					Second Tab content to be displayed here.
+				</div>
+			</div>
+			<div id="tab3" class="tab-content hidden">
+				<div
+					class="rounded-2xl bg-black p-6 text-center text-white text-lg"
+				>
+					Third Tab content to be displayed here.
+				</div>
+			</div>
+			<div id="tab4" class="tab-content hidden">
+				<div
+					class="rounded-2xl bg-black p-6 text-center text-white text-lg"
+				>
+					Fourth Tab content to be displayed here.
+				</div>
+			</div>
+
+			<p class="mt-6 text-lg">
+				Add some dummy content or just add a simple text showing the tab
+			</p>
+		</div>
+
+		<script>
+			// Grab all tab buttons and contents
+			const tabButtons = document.querySelectorAll('.tab-btn');
+			console.log(tabButtons);
+			const tabContents = document.querySelectorAll('.tab-content');
+
+			tabButtons.forEach((btn) => {
+				btn.addEventListener('click', () => {
+					// Remove active classes
+					tabButtons.forEach((b) => {
+						b.classList.remove('text-black', 'after:bg-black', 'active');
+						b.classList.add('text-gray-400');
+					});
+					tabContents.forEach((c) => c.classList.add('hidden'));
+
+					// Add active class to current
+					btn.classList.remove('text-gray-400');
+					btn.classList.add('text-black', 'after:bg-black', 'active');
+
+					// Show related content
+					const target = btn.dataset.tab;
+					document.getElementById(target).classList.remove('hidden');
+				});
+			});
+		</script>
+	</body>
+</html>
