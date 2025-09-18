@@ -22,6 +22,6 @@ Click any of the images below to view the readme and live demo of the project.
     <img width="48%" src="./assets/images/basic-html-website.png" alt="basic html website" />
   </a>
    <a href='/personal-portfolio'>
-    <img width="48%" src="./assets/images/basic-html-website.png" alt="basic html website" />
+    <img width="48%" src="./assets/images/personal-portfolio.png" alt="basic html website" />
   </a>
 </p>
