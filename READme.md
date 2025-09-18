@@ -26,6 +26,6 @@ Click any of the images below to view the readme and live demo of the project.
     <img width="48%" src="./assets/images/personal-portfolio.png" alt="basic html website" />
   </a>
    <a href='/image-grid-layout'>
-    <img width="48%" src="./assets/images/image-grid.png" alt="basic html website" />
+    <img width="48%" src="./assets/images/image-grid.png" alt="image grid" />
   </a>
 </p>
