@@ -9,6 +9,7 @@ This repository contains front-end projects built following the [roadmap.sh](htt
 [Basic Html Website](https://roadmap.sh/projects/basic-html-website),
 [Personal Portfolio](https://roadmap.sh/projects/portfolio-website),
 [Image Grid Layout](https://roadmap.sh/projects/image-grid),
+[Accessible Form UI](https://roadmap.sh/projects/accessible-form-ui),
 
 Click any of the images below to view the readme and live demo of the project.
 
@@ -25,7 +26,10 @@ Click any of the images below to view the readme and live demo of the project.
    <a href='/personal-portfolio'>
     <img width="48%" src="./assets/images/personal-portfolio.png" alt="basic html website" />
   </a>
-   <a href='/image-grid-layout'>
+  <a href='/image-grid-layout'>
     <img width="48%" src="./assets/images/image-grid.png" alt="image grid" />
+  </a>
+  <a href='/accessible-form-ui'>
+    <img width="48%" src="./assets/images/accessible-form-ui.png" alt="image grid" />
   </a>
 </p>
