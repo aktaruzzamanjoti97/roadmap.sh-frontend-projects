@@ -6,7 +6,8 @@ This repository contains front-end projects built following the [roadmap.sh](htt
 
 [Single Page Cv](https://roadmap.sh/projects/single-page-cv),
 [Tabs](https://roadmap.sh/projects/simple-tabs)
-[Basic Html Website](https://roadmap.sh/projects/basic-html-website)
+[Basic Html Website](https://roadmap.sh/projects/basic-html-website),
+[Personal Portfolio](https://roadmap.sh/projects/portfolio-website),
 
 Click any of the images below to view the readme and live demo of the project.
 
@@ -18,6 +19,9 @@ Click any of the images below to view the readme and live demo of the project.
     <img width="48%" src="./assets/images/tabs.png" alt="tabs" />
   </a>
   <a href='/basic-html-website'>
+    <img width="48%" src="./assets/images/basic-html-website.png" alt="basic html website" />
+  </a>
+   <a href='/personal-portfolio'>
     <img width="48%" src="./assets/images/basic-html-website.png" alt="basic html website" />
   </a>
 </p>
