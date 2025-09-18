@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Grid Layout Project</title>
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+		<style>
+			/* Custom styles for specific grid areas */
+			@media (min-width: 768px) {
+				.grid-container {
+					grid-template-areas:
+						'img1 img1 img3 img5 img5'
+						'img1 img1 img4 img5 img5'
+						'img2 img2 img4 img6 img6'
+						'img2 img2 img4 img6 img6';
+				}
+
+				.img-1 {
+					grid-area: img1;
+				}
+				.img-2 {
+					grid-area: img2;
+				}
+				.img-3 {
+					grid-area: img3;
+				}
+				.img-4 {
+					grid-area: img4;
+				}
+				.img-5 {
+					grid-area: img5;
+				}
+				.img-6 {
+					grid-area: img6;
+				}
+			}
+		</style>
+	</head>
+	<body class="bg-gray-100 p-4 md:p-8">
+		<div class="max-w-7xl mx-auto">
+			<h1 class="text-3xl font-bold text-gray-800 mb-8 text-center">
+				CSS Grid Layout Gallery
+			</h1>
+
+			<!-- Grid Container -->
+			<div
+				class="grid-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 auto-rows-fr"
+			>
+				<!-- Image 1: Foggy beach with rock formation -->
+				<div
+					class="img-1 relative overflow-hidden rounded-lg shadow-lg group"
+				>
+					<img
+						src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&h=600&fit=crop"
+						alt="Foggy beach with a large rock formation"
+						class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+					/>
+					<div
+						class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+					></div>
+				</div>
+
+				<!-- Image 2: Living room with white couch -->
+				<div
+					class="img-2 relative overflow-hidden rounded-lg shadow-lg group"
+				>
+					<img
+						src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop"
+						alt="Living room with a white couch and round window"
+						class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+					/>
+					<div
+						class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+					></div>
+				</div>
+
+				<!-- Image 3: Table with food -->
+				<div
+					class="img-3 relative overflow-hidden rounded-lg shadow-lg group"
+				>
+					<img
+						src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=800&h=600&fit=crop"
+						alt="Table topped with plates and bowls of food"
+						class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+					/>
+					<div
+						class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+					></div>
+				</div>
+
+				<!-- Image 4: Building with red door -->
+				<div
+					class="img-4 relative overflow-hidden rounded-lg shadow-lg group"
+				>
+					<img
+						src="https://images.unsplash.com/photo-1430285561322-7808604715df?w=800&h=1000&fit=crop"
+						alt="Building with a red door and tree"
+						class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+					/>
+					<div
+						class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+					></div>
+				</div>
+
+				<!-- Image 5: Apartment buildings -->
+				<div
+					class="img-5 relative overflow-hidden rounded-lg shadow-lg group"
+				>
+					<img
+						src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&h=600&fit=crop"
+						alt="Row of white apartment buildings"
+						class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+					/>
+					<div
+						class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+					></div>
+				</div>
+
+				<!-- Image 6: Beach view from hill -->
+				<div
+					class="img-6 relative overflow-hidden rounded-lg shadow-lg group"
+				>
+					<img
+						src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop"
+						alt="View of beach from hilltop"
+						class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+					/>
+					<div
+						class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+					></div>
+				</div>
+			</div>
+
+			<!-- Info Section -->
+			<div class="mt-12 bg-white rounded-lg shadow-md p-6">
+				<h2 class="text-2xl font-semibold text-gray-800 mb-4">
+					About This Grid Layout
+				</h2>
+				<div class="space-y-3 text-gray-600">
+					<p>
+						<strong>Grid Structure:</strong> This layout uses CSS Grid
+						with named grid areas to create a complex, asymmetric design
+						where images span different numbers of rows and columns.
+					</p>
+					<p>
+						<strong>Responsive Design:</strong> On mobile devices, the
+						layout switches to a single column. On tablets (sm
+						breakpoint), it becomes 2 columns. On desktop (md and above),
+						it displays the full 5-column grid with custom spanning.
+					</p>
+					<p><strong>Key Features:</strong></p>
+					<ul class="list-disc list-inside ml-4 space-y-1">
+						<li>Images 1 and 2 span 2 columns and 2 rows (left side)</li>
+						<li>Image 3 spans 1 column and 1 row (top center)</li>
+						<li>Image 4 spans 1 column and 3 rows (vertical middle)</li>
+						<li>Images 5 and 6 span 2 columns and 2 rows (right side)</li>
+						<li>Hover effects with scale and gradient overlay</li>
+						<li>Consistent gap spacing between grid items</li>
+						<li>Rounded corners and shadows for modern appearance</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
