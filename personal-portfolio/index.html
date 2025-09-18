@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Frontend Developer Portfolio - Showcasing web development projects, skills, and experience"
+		/>
+		<title>Frontend Developer Portfolio</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<style>
+			/* CSS Variables for theming and dark mode support */
+			:root {
+				--color-background: #ffffff;
+				--color-surface: #f9fafb;
+				--color-border: #000000;
+				--color-text: #000000;
+				--color-text-muted: #6b7280;
+				--color-primary: #000000;
+				--color-card-bg: #ffffff;
+				--font-family: 'Inter', system-ui, -apple-system, sans-serif;
+				--max-width: 1200px;
+				--spacing-xs: 0.25rem;
+				--spacing-sm: 0.5rem;
+				--spacing-md: 1rem;
+				--spacing-lg: 1.5rem;
+				--spacing-xl: 2rem;
+				--spacing-2xl: 3rem;
+				--border-width: 2px;
+				--border-radius: 0.75rem;
+			}
+
+			/* Dark mode support */
+			@media (prefers-color-scheme: dark) {
+				:root {
+					--color-background: #0a0a0a;
+					--color-surface: #1a1a1a;
+					--color-border: #ffffff;
+					--color-text: #ffffff;
+					--color-text-muted: #a3a3a3;
+					--color-primary: #ffffff;
+					--color-card-bg: #1a1a1a;
+				}
+			}
+
+			/* Reset and base styles */
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: var(--font-family);
+				background-color: var(--color-background);
+				color: var(--color-text);
+				line-height: 1.6;
+				min-height: 100vh;
+				display: flex;
+				flex-direction: column;
+			}
+
+			/* Container */
+			.container {
+				width: 100%;
+				max-width: var(--max-width);
+				margin: 0 auto;
+				padding: var(--spacing-lg);
+			}
+
+			/* Header and Navigation */
+			header {
+				border: var(--border-width) solid var(--color-border);
+				background-color: var(--color-card-bg);
+				margin-bottom: var(--spacing-xl);
+			}
+
+			nav {
+				padding: var(--spacing-lg);
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				flex-wrap: wrap;
+				gap: var(--spacing-md);
+			}
+
+			.logo {
+				display: flex;
+				align-items: center;
+				gap: var(--spacing-sm);
+				font-weight: 600;
+				font-size: 1.125rem;
+			}
+
+			.logo::before {
+				content: '';
+				width: 24px;
+				height: 24px;
+				background-color: var(--color-text);
+				display: block;
+			}
+
+			nav ul {
+				list-style: none;
+				display: flex;
+				gap: var(--spacing-xl);
+				align-items: center;
+			}
+
+			nav a {
+				color: var(--color-text);
+				text-decoration: none;
+				font-weight: 500;
+				transition: opacity 0.2s;
+			}
+
+			nav a:hover {
+				opacity: 0.7;
+			}
+
+			/* Main Content */
+			main {
+				flex: 1;
+			}
+
+			/* Hero Section */
+			.hero {
+				text-align: center;
+				padding: var(--spacing-2xl) var(--spacing-lg);
+				margin-bottom: var(--spacing-2xl);
+			}
+
+			.hero h1 {
+				font-size: 2.5rem;
+				font-weight: 400;
+				margin-bottom: var(--spacing-sm);
+				font-family: 'Courier New', monospace;
+			}
+
+			.hero p {
+				color: var(--color-text-muted);
+				font-size: 1rem;
+			}
+
+			/* Grid Layout */
+			.content-grid {
+				display: grid;
+				grid-template-columns: 1fr;
+				gap: 0;
+				border: var(--border-width) solid var(--color-border);
+				background-color: var(--color-card-bg);
+			}
+
+			/* Grid Sections */
+			.grid-section {
+				padding: var(--spacing-xl);
+				border-bottom: var(--border-width) solid var(--color-border);
+			}
+
+			.grid-section:last-child {
+				border-bottom: none;
+			}
+
+			.grid-section h2 {
+				font-size: 1.5rem;
+				margin-bottom: var(--spacing-lg);
+				font-family: 'Courier New', monospace;
+				font-weight: 400;
+			}
+
+			.grid-section h3 {
+				font-size: 1.125rem;
+				margin-bottom: var(--spacing-sm);
+				font-weight: 600;
+			}
+
+			.grid-section ul {
+				list-style: none;
+				margin-top: var(--spacing-md);
+			}
+
+			.grid-section li {
+				padding: var(--spacing-sm) 0;
+				border-bottom: 1px solid var(--color-border);
+			}
+
+			.grid-section li:last-child {
+				border-bottom: none;
+			}
+
+			.grid-section a {
+				color: #2563eb;
+				text-decoration: none;
+			}
+
+			.grid-section a:hover {
+				text-decoration: underline;
+			}
+
+			/* Work Experience */
+			.work-item {
+				margin-bottom: var(--spacing-xl);
+			}
+
+			.work-item:last-child {
+				margin-bottom: 0;
+			}
+
+			/* Reviews Section */
+			.reviews {
+				padding: var(--spacing-2xl) var(--spacing-lg);
+			}
+
+			.reviews h2 {
+				font-size: 1.5rem;
+				margin-bottom: var(--spacing-xl);
+				font-family: 'Courier New', monospace;
+				font-weight: 400;
+			}
+
+			.reviews-grid {
+				display: grid;
+				grid-template-columns: 1fr;
+				gap: var(--spacing-lg);
+			}
+
+			.review-card {
+				border: var(--border-width) solid var(--color-border);
+				border-radius: var(--border-radius);
+				padding: var(--spacing-lg);
+				background-color: var(--color-card-bg);
+			}
+
+			.review-card p {
+				margin-bottom: var(--spacing-md);
+				line-height: 1.5;
+			}
+
+			.review-card cite {
+				display: block;
+				color: var(--color-text-muted);
+				font-style: normal;
+				font-size: 0.875rem;
+			}
+
+			/* Footer */
+			footer {
+				text-align: center;
+				padding: var(--spacing-xl) var(--spacing-lg);
+				margin-top: var(--spacing-2xl);
+			}
+
+			footer p {
+				font-size: 0.875rem;
+			}
+
+			/* Mobile First Responsive Design */
+			@media (min-width: 768px) {
+				.hero h1 {
+					font-size: 3rem;
+				}
+
+				.content-grid {
+					grid-template-columns: 1fr 1.5fr 1fr;
+				}
+
+				.grid-section {
+					border-bottom: none;
+					border-right: var(--border-width) solid var(--color-border);
+				}
+
+				.grid-section:last-child {
+					border-right: none;
+				}
+
+				.reviews-grid {
+					grid-template-columns: repeat(3, 1fr);
+				}
+			}
+
+			@media (min-width: 1024px) {
+				.hero h1 {
+					font-size: 3.5rem;
+				}
+
+				nav ul {
+					gap: var(--spacing-2xl);
+				}
+			}
+
+			/* Dark mode toggle (bonus) */
+			.theme-toggle {
+				background: transparent;
+				border: var(--border-width) solid var(--color-border);
+				color: var(--color-text);
+				padding: var(--spacing-sm) var(--spacing-md);
+				cursor: pointer;
+				border-radius: var(--spacing-xs);
+				font-family: inherit;
+				font-weight: 500;
+			}
+
+			/* Contact Form Styles */
+			.contact-form {
+				max-width: 600px;
+				margin: 0 auto;
+			}
+
+			.form-group {
+				margin-bottom: var(--spacing-lg);
+			}
+
+			.form-group label {
+				display: block;
+				margin-bottom: var(--spacing-sm);
+				font-weight: 500;
+			}
+
+			.form-group input,
+			.form-group textarea,
+			.form-group select {
+				width: 100%;
+				padding: var(--spacing-sm) var(--spacing-md);
+				border: var(--border-width) solid var(--color-border);
+				background-color: var(--color-background);
+				color: var(--color-text);
+				font-family: inherit;
+				font-size: 1rem;
+				border-radius: var(--spacing-xs);
+			}
+
+			.form-group textarea {
+				resize: vertical;
+				min-height: 120px;
+			}
+
+			.form-actions {
+				display: flex;
+				gap: var(--spacing-md);
+				justify-content: flex-start;
+			}
+
+			.btn {
+				padding: var(--spacing-sm) var(--spacing-xl);
+				border: var(--border-width) solid var(--color-border);
+				background-color: var(--color-text);
+				color: var(--color-background);
+				font-family: inherit;
+				font-size: 1rem;
+				font-weight: 500;
+				cursor: pointer;
+				transition: transform 0.2s;
+			}
+
+			.btn:hover {
+				transform: translateY(-2px);
+			}
+
+			.btn-secondary {
+				background-color: transparent;
+				color: var(--color-text);
+			}
+
+			/* Projects and Articles Pages */
+			.project-card,
+			.article-card {
+				border: var(--border-width) solid var(--color-border);
+				padding: var(--spacing-xl);
+				margin-bottom: var(--spacing-lg);
+				background-color: var(--color-card-bg);
+			}
+
+			.project-card h2,
+			.article-card h2 {
+				font-size: 1.5rem;
+				margin-bottom: var(--spacing-md);
+			}
+
+			.meta-info {
+				color: var(--color-text-muted);
+				font-size: 0.875rem;
+				margin-bottom: var(--spacing-md);
+			}
+
+			.project-links,
+			.article-meta {
+				margin-top: var(--spacing-lg);
+			}
+
+			.project-links a {
+				color: #2563eb;
+				text-decoration: none;
+				margin-right: var(--spacing-lg);
+			}
+
+			.project-links a:hover {
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<nav>
+					<div class="logo">Aktaruzzaman Joti</div>
+					<ul>
+						<li><a href="#home">Home</a></li>
+						<li><a href="#projects">Projects</a></li>
+						<li><a href="#articles">Articles</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<main>
+				<section class="hero">
+					<h1>Frontend Developer</h1>
+					<p>html only with proper layout, no styling</p>
+				</section>
+
+				<div class="content-grid">
+					<section class="grid-section">
+						<h2>Projects</h2>
+						<ul>
+							<li>HTML Only Portfolio</li>
+							<li>Calculator</li>
+							<li>Quiz App</li>
+							<li>Countdown Timer</li>
+							<li>Product Upcoming Page</li>
+						</ul>
+					</section>
+
+					<section class="grid-section">
+						<h2>Work Experience</h2>
+						<div class="work-item">
+							<h3>roadmap.sh</h3>
+							<p>Solved all the frontend projects</p>
+							<a href="#">Visit my Profile</a>
+						</div>
+						<div class="work-item">
+							<h3>OpenSource Work</h3>
+							<p>
+								Contributed to 50 opensource projects. Made my own
+								projects with 200 GitHub Stars.
+							</p>
+							<a href="#">Visit my GitHub Profile</a>
+						</div>
+					</section>
+
+					<section class="grid-section">
+						<h2>Education</h2>
+						<p>
+							Graduated with 3.76 out of 4 CGPA. Won Acme Hackathon.
+							Organized 30 sessions.
+						</p>
+						<p style="margin-top: var(--spacing-lg); font-weight: 600">
+							Courses I took:
+						</p>
+						<ul>
+							<li>- Object Oriented Programming</li>
+							<li>- Data Structures and Algorithms</li>
+							<li>- Web Engineering</li>
+							<li>- Artificial Intelligence</li>
+							<li>- Human Computer Interaction</li>
+							<li>- Computer Graphics</li>
+							<li>- Database Management Systems</li>
+							<li>- Distributed Database Systems</li>
+							<li>- Discreet Mathematics</li>
+						</ul>
+					</section>
+				</div>
+
+				<section class="reviews">
+					<h2>Reviews from my Teachers</h2>
+					<div class="reviews-grid">
+						<div class="review-card">
+							<p>
+								John doe was a brilliant student; always stood out with
+								his assignments.
+							</p>
+							<cite>Jane Doe<br />Assistant Professor</cite>
+						</div>
+						<div class="review-card">
+							<p>
+								John doe was a brilliant student; always stood out with
+								his assignments.
+							</p>
+							<cite>Jane Doe<br />Assistant Professor</cite>
+						</div>
+						<div class="review-card">
+							<p>
+								John doe was a brilliant student; always stood out with
+								his assignments.
+							</p>
+							<cite>Jane Doe<br />Assistant Professor</cite>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			<footer>
+				<p>&copy; all rights reserved 2025</p>
+			</footer>
+		</div>
+
+		<script>
+			// Dark mode toggle functionality (bonus)
+			function initDarkMode() {
+				const savedTheme = localStorage.getItem('theme');
+				if (savedTheme === 'dark') {
+					document.documentElement.style.setProperty(
+						'--color-background',
+						'#0a0a0a'
+					);
+					document.documentElement.style.setProperty(
+						'--color-surface',
+						'#1a1a1a'
+					);
+					document.documentElement.style.setProperty(
+						'--color-border',
+						'#ffffff'
+					);
+					document.documentElement.style.setProperty(
+						'--color-text',
+						'#ffffff'
+					);
+					document.documentElement.style.setProperty(
+						'--color-text-muted',
+						'#a3a3a3'
+					);
+					document.documentElement.style.setProperty(
+						'--color-card-bg',
+						'#1a1a1a'
+					);
+				}
+			}
+
+			initDarkMode();
+		</script>
+	</body>
+</html>
