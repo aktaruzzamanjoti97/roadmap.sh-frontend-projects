@@ -16,4 +16,7 @@ Click any of the images below to view the readme and live demo of the project.
   <a href='/tabs'>
     <img width="48%" src="./assets/images/tabs.png" alt="tabs" />
   </a>
+  <a href='/basic-html-website'>
+    <img width="48%" src="./assets/images/basic-html-website.png" alt="basic html website" />
+  </a>
 </p>
