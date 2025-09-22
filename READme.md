@@ -10,6 +10,7 @@ This repository contains front-end projects built following the [roadmap.sh](htt
 [Personal Portfolio](https://roadmap.sh/projects/portfolio-website),
 [Image Grid Layout](https://roadmap.sh/projects/image-grid),
 [Accessible Form UI](https://roadmap.sh/projects/accessible-form-ui),
+[24hr Story Feature](https://roadmap.sh/projects/stories-feature),
 
 Click any of the images below to view the readme and live demo of the project.
 
