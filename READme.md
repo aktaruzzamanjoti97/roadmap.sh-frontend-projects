@@ -32,4 +32,7 @@ Click any of the images below to view the readme and live demo of the project.
   <a href='/accessible-form-ui'>
     <img width="48%" src="./assets/images/accessible-form-ui.png" alt="image grid" />
   </a>
+  <a href='https://github.com/aktaruzzamanjoti97/instagram-stories'>
+    <img width="48%" src="./assets/images/insta-stories.png" alt="insta stories" />
+  </a>
 </p>
